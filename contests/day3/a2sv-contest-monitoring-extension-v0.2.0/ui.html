@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>A2SV Contest Monitoring System</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="./camera.js"></script>
+    <script defer src="./screen.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <img class="nav__logo" src="logo.png" height="40px" />
+      <h1 class="nav__title">Contest Monitoring System</h1>
+    </nav>
+    <main class="main">
+      <div class="main__stream">
+        <div class="main__stream__video_area">
+          <video
+            id="streamVideo"
+            class="main__stream__video_area__video"
+          ></video>
+        </div>
+        <h3 class="main__stream__title">Your Screen</h3>
+        <canvas id="streamCanvas" class="main__stream__canvas"> </canvas>
+      </div>
+
+      <div class="main__camera">
+        <div class="main__camera__video_area">
+          <video
+            id="cameraVideo"
+            class="main__camera__video_area__video"
+          ></video>
+        </div>
+        <h3 class="main__camera__title">Your Camera</h3>
+        <canvas id="cameraCanvas" class="main__camera__canvas"> </canvas>
+      </div>
+    </main>
+  </body>
+</html>

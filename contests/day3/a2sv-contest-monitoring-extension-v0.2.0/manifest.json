@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+
+  "name": "A2SV Contest Monitoring",
+  "version": "0.1.1",
+  "description": "A2SV Contest Monitor is a Chrome extension that will monitor student activities during contests to provide a safe and fair playground for competition.",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "128": "/icons/icon128.png"
+  },
+
+  "host_permissions": ["https://codeforces.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.codeforces.com/gym/*",
+        "https://*.codeforces.com/contests/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": ["tabs", "offscreen", "storage"]
+}
